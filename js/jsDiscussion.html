@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Discussion</title>
+
+<script type="text/javascript">
+	function displayInformation () {
+        document.querySelector("h1").innerHTML = "Benjamin Roth";
+        document.querySelector("#URL").innerHTML = document.URL;
+        document.querySelector('#items').innerHTML = document.querySelectorAll('li').length;
+        document.querySelector('#time').innerHTML = new Date();
+        document.body.style.backgroundColor = '#00274C';
+        document.body.style.color = "#ffcb05";
+        document.body.style.margin = "150px";
+    }
+    
+    function copyFunction() {
+        document.querySelector("#cheer").innerHTML += "<br>Go Blue!";
+    }
+</script>
+<style>
+p{
+	background-color: #b3b3b3;
+	border: 3px solid #FFFFFF;
+	padding: 3%;
+	font-size: 1.1em;
+	line-height: 1.5;
+}
+</style>
+</head>
+<body onload = "displayInformation();">
+	<h1>Your name goes here</h1>
+
+	<ol>
+		<li>Apples</li>
+		<li>Bananas</li>
+		<li>Celery</li>
+		<li>Doughnuts</li>
+	</ol>
+	<h2>Use JavaScript to display the following information here:</h2>
+	<p>
+		The URL of this page is: <span id = "URL"></span><br/>
+		The number of list items for this page: <span id = "items"></span><br/>
+		The current date/time is: <span id = "time"></span><br/>
+	</p>
+	<ul>
+		<li>Kent State</li>
+		<li>University of Pittsburgh</li>
+		<li>University of Ulster</li>
+		<li>California State University Long Beach</li>
+		<li oncopy="copyFunction()">University of Michigan</li>
+	</ul>
+	<div id="cheer">
+
+	</div>
+
+</body>
+</html>
